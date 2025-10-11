@@ -1,10 +1,10 @@
 {
-  "name": "sats-wagmi",
+  "name": "wallet-connect",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bob-collective/sats-wagmi"
+    "url": "https://github.com/ordxfun/wallet-connect"
   },
   "scripts": {
     "lint": "eslint packages/**/src --ext .ts,.tsx --config .eslintrc.json --cache",

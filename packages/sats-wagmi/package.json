@@ -1,14 +1,15 @@
 {
-  "name": "@gobob/sats-wagmi",
+  "name": "@ordxfun/wallet-connect",
   "version": "0.3.23",
-  "description": "Bob sats-wagmi.",
-  "homepage": "https://github.com/bob-collective/sats-wagmi#readme",
+  "description": "BTC wallet connectors and React hooks for wallet-connect.",
+  "homepage": "https://github.com/ordxfun/wallet-connect#readme",
   "license": "MIT",
   "keywords": [
-    "bob",
+    "wallet-connect",
     "btc wallet connector",
     "btc wallet connector hooks",
-    "btc wallet connector config"
+    "btc wallet connector config",
+    "ordxfun"
   ],
   "main": "src/index.ts",
   "files": [
@@ -20,11 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bob-collective/sats-wagmi.git",
+    "url": "git+https://github.com/ordxfun/wallet-connect.git",
     "directory": "packages/sats-wagmi"
   },
   "bugs": {
-    "url": "https://github.com/bob-collective/sats-wagmi/issues"
+    "url": "https://github.com/ordxfun/wallet-connect/issues"
   },
   "scripts": {
     "lint": "eslint .",
