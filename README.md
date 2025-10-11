@@ -1,9 +1,11 @@
 <p align="center">
-      <h1 align="center">Sats-Wagmi</h1>
+      <h1 align="center">Wallet-Connect</h1>
 </p>
 </br>
 
-sats-wagmi is a library with a handful of BTC wallet connectors, leaving aside the need of the developer to integrate each one individually. The library also exports useful React hooks that mimic the standard followed in the original EVM wagmi library.
+Wallet-Connect is a library with a handful of BTC wallet connectors, leaving aside the need of the developer to integrate each one individually. The library also exports useful React hooks that mimic the standard followed in the original EVM wagmi library.
+
+This project is inspired by and builds upon the excellent work done in [sats-wagmi](https://github.com/bob-collective/sats-wagmi) by the Bob Collective team.
 
 The package is still in an infancy state, but feel free to recommend any adjustments that you see fit.
 
@@ -37,21 +39,21 @@ The package is still in an infancy state, but feel free to recommend any adjustm
 
 ## Installation
 
-To use sats-wagmi, all you need to do is install the
-`@gobob/sats-wagmi`:
+To use wallet-connect, all you need to do is install the
+`@ordxfun/wallet-connect`:
 
 ```sh
 # with Yarn
-$ yarn add @gobob/sats-wagmi
+$ yarn add @ordxfun/wallet-connect
 
 # with npm
-$ npm i @gobob/sats-wagmi
+$ npm i @ordxfun/wallet-connect
 
 # with pnpm
-$ pnpm add @gobob/sats-wagmi
+$ pnpm add @ordxfun/wallet-connect
 
 # with Bun
-$ bun add @gobob/sats-wagmi
+$ bun add @ordxfun/wallet-connect
 ```
 
 ## Usage
@@ -68,26 +70,26 @@ mmSnap.connect();
 
 ### React Hooks
 
-1. Wrap your application with the `SatsWagmiConfig` provided by **@gobob/sats-wagmi**.
+1. Wrap your application with the `WalletConnectConfig` provided by **@ordxfun/wallet-connect**.
 
 ```tsx
-import { SatsWagmiConfig } from '@gobob/sats-wagmi';
+import { WalletConnectConfig } from '@ordxfun/wallet-connect';
 
 // Do this at the root of your application
 function App({ children }) {
-  return <SatsWagmiConfig network='testnet'>{children}</SatsWagmiConfig>;
+  return <WalletConnectConfig network='testnet'>{children}</WalletConnectConfig>;
 }
 ```
 
 2. Now start by connecting:
 
 ```tsx
-import { useConnect, SatsConnector } from '@gobob/sats-wagmi';
+import { useConnect, WalletConnector } from '@ordxfun/wallet-connect';
 
 function Example() {
   const { connectors, connect } = useConnect();
 
-  const handleConnect = (connector: SatsConnector) => {
+  const handleConnect = (connector: WalletConnector) => {
     connect({
       connector
     });
@@ -108,10 +110,10 @@ function Example() {
 3. Once connected, you should be able to use the connector utility and have access to the connected BTC account:
 
 ```tsx
-import { useConnect, SatsConnector } from '@gobob/sats-wagmi';
+import { useConnect, WalletConnector } from '@ordxfun/wallet-connect';
 
 function Example() {
-  const { address, connector } = useSatsAccount();
+  const { address, connector } = useWalletAccount();
 
   const handleTransfer = () => {
     connector?.sendToAddress('tb1p9gl248kp19jgennea98e2tv8acfrvfv0yws2tc5j6u72e84caapsh2hexs', 100000000);
@@ -130,7 +132,7 @@ function Example() {
 
 Contributions are always welcome!
 
-See [CONTRIBUTING.md](https://github.com/bob-collective/sats-wagmi/blob/main/CONTRIBUTING.MD) for ways to get started.
+See [CONTRIBUTING.md](./CONTRIBUTING.MD) for ways to get started.
 
 ## License
 
