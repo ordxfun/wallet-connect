@@ -7,6 +7,7 @@ module.exports = {
   rules: {
     ...conventional.rules,
     'type-enum': [2, 'always', ['feat', 'feature', 'fix', 'refactor', 'docs', 'build', 'test', 'ci', 'chore']],
+    'header-max-length': [0],
     'function-rules/header-max-length': [0]
   }
 };
