@@ -1,5 +1,11 @@
 # @gobob/sats-wagmi
 
+## 0.3.24
+
+### Patch Changes
+
+- Fix documentation and build configuration issues. Update package name references and improve npm publishing setup.
+
 ## 0.3.23
 
 ### Patch Changes
