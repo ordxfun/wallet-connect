@@ -1,6 +1,6 @@
 import type { FormEvent } from 'react';
 
-import { useSendGatewayTransaction } from '@gobob/sats-wagmi';
+import { useSendGatewayTransaction } from '@ordxfun/wallet-connect';
 import { type Hex, parseUnits } from 'viem';
 
 function Gateway() {

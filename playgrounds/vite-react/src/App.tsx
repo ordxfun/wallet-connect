@@ -9,7 +9,7 @@ import {
   useSendTransaction,
   useSignMessage,
   useWaitForTransactionReceipt
-} from '@gobob/sats-wagmi';
+} from '@ordxfun/wallet-connect';
 
 import Gateway from './Gateway.tsx';
 

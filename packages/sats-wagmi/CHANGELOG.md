@@ -1,4 +1,4 @@
-# @gobob/sats-wagmi
+# @ordxfun/wallet-connect
 
 ## 0.3.24
 
