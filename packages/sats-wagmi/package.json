@@ -11,7 +11,9 @@
     "btc wallet connector config",
     "ordxfun"
   ],
-  "main": "./index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -27,10 +29,29 @@
   "bugs": {
     "url": "https://github.com/ordxfun/wallet-connect/issues"
   },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "jest",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",
     "react": ">=18",
     "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/async-retry": "^1.4.8",
+    "@types/bs58check": "^2.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@bitcoin-js/tiny-secp256k1-asmjs": "^2.2.3",
@@ -48,13 +69,11 @@
     "usehooks-ts": "^3.1.0"
   },
   "clean-package": "../../../clean-package.config.json",
-  "module": "./index.mjs",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./package.json": "./package.json"
   }

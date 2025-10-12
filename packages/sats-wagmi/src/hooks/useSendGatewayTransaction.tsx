@@ -1,9 +1,11 @@
 'use client';
 
-import { Optional, useMutation, UseMutationOptions } from '@tanstack/react-query';
+import { useMutation, UseMutationOptions } from '@tanstack/react-query';
 import { GatewayQuoteParams, GatewaySDK } from '@gobob/bob-sdk';
 
 import { useAccount } from './useAccount';
+
+type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 
 type SendGatewayTransactionParams = {
   toToken: string;
