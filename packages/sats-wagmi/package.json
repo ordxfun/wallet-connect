@@ -1,6 +1,6 @@
 {
   "name": "@ordxfun/wallet-connect",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "description": "BTC wallet connectors and React hooks for wallet-connect.",
   "homepage": "https://github.com/ordxfun/wallet-connect#readme",
   "license": "MIT",
